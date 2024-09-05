@@ -36,6 +36,7 @@
 		0F10FEF22C87D8F50099A232 /* UserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		0F10FEF42C87DA980099A232 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		0F10FEF62C87E9580099A232 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		0F1BC5052C8A6173007E3D9E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		0F786EC52C882D5700B0EB3D /* Page2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page2ViewController.swift; sourceTree = "<group>"; };
 		0F786EC72C882D7600B0EB3D /* Page3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page3ViewController.swift; sourceTree = "<group>"; };
 		0FFA5B232C892D62004FDC28 /* RecorderManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecorderManager.swift; sourceTree = "<group>"; };
@@ -56,6 +57,7 @@
 		0F10FECC2C87D79F0099A232 = {
 			isa = PBXGroup;
 			children = (
+				0F1BC5052C8A6173007E3D9E /* README.md */,
 				0F10FED72C87D7A00099A232 /* RandomUser */,
 				0F10FED62C87D7A00099A232 /* Products */,
 			);
