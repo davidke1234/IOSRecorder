@@ -2,7 +2,7 @@
 //  RecordefViewController.swift
 //  RandomUser
 //
-//  Created by Dad on 9/3/24.
+//  Created by David on 9/3/24.
 //
 
 import UIKit
@@ -112,9 +112,4 @@ class Page2ViewController: UIViewController {
         RecorderManager.shared.stopRecording()
         RecorderManager.shared.saveToCoreData(fileName: fileName)
     }
-
-//    func playAudio(fileName: String) {
-//        // Playing back the audio
-//        PlaybackManager.shared.playAudio(fileName: fileName)
-//    }
 }

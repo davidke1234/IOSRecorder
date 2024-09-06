@@ -11,22 +11,23 @@ class Page1ViewController: UIViewController {
     
     var nextUser = UserModel(first: "",last: "",DOB: "",email: "",picture: "",gender: "")
    
-//    @IBAction func goToNextPage(_ sender: UIButton) {
-//        self.performSegue(withIdentifier: "goToRecorder", sender: self)
-//    }
     @IBOutlet weak var Email: UILabel!
     @IBOutlet weak var Name: UILabel!
     @IBOutlet weak var DOB: UILabel!
- 
-    @IBAction func btnNextPage(_ sender: UIButton) {
-        self.performSegue(withIdentifier: "goToRecorder", sender: self)
-    }
+    
+    @IBOutlet weak var InfoView: UIView!
+    
     
     var userManager = UserManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        InfoView.backgroundColor = UIColor.white
+        view.setOnClickListener {
+            print("view clicked")
+            self.performSegue(withIdentifier: "goToRecorder", sender: self)
+        }
+
         userManager.delegate = self
         userManager.fetchUser()
     }
@@ -46,7 +47,7 @@ class Page1ViewController: UIViewController {
 
 extension Page1ViewController: UserManagerDelegate {
     
-    //*** create the delegate func.  The can be implemented by swift after adding the interface(protocol) of WeatherManagerDelegate
+    //*** create the delegate func.  This can be implemented by swift after adding the interface(protocol)
     func didUpdateUser(_ userManager: UserManager, user: UserModel) {
         //use dispatch to only update when data is ready.
         DispatchQueue.main.async {
@@ -61,9 +62,7 @@ extension Page1ViewController: UserManagerDelegate {
             self.Name.text = fullName
             self.DOB.text = user.DOB
    
-            //self.nextUser = user
             self.nextUser = UserModel(first: user.first,last: user.last,DOB: user.DOB,email: user.email,picture: user.picture, gender: user.gender)
-
         }
     }
     
@@ -71,8 +70,9 @@ extension Page1ViewController: UserManagerDelegate {
         print(error)
         //todo: show user something
     }
-   
 }
+
+
 
 
 

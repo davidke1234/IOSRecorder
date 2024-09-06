@@ -1,5 +1,5 @@
 //
-//  AudioPlaybackManager.swift
+//  PlaybackManager.swift
 //  RandomUser
 //
 //  Created by David on 9/4/24.

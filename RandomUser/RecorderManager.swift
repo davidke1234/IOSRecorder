@@ -1,5 +1,5 @@
 //
-//  AudioRecorderManager.swift
+//  RecorderManager.swift
 //  RandomUser
 //
 //  Created by David on 9/4/24.
@@ -8,22 +8,24 @@
 /*[/Users/<user>/Library/Developer/CoreSimulator/Devices/6500F834-7CAF-4081-B9CD-8F18EE0327D5/data/Containers/Data/Application/30BF21A4-55E6-4557-A6F7-752D298F036A/Library/Application Support]
  */
 
-
 import UIKit
 import AVFoundation
 
 class RecorderManager: NSObject, AVAudioRecorderDelegate {
+    //Setup for singleton pattern
     static let shared = RecorderManager()
     
     var audioRecorder: AVAudioRecorder?
     var audioFileURL: URL?
     
+    //needed for singleton
     private override init() {
         super.init()
         setupRecorder()
     }
     
     private func setupRecorder() {
+        print("** SetupRecorder")
         let audioSession = AVAudioSession.sharedInstance()
         try? audioSession.setCategory(.record, mode: .default)
         try? audioSession.setActive(true)
@@ -61,6 +63,7 @@ class RecorderManager: NSObject, AVAudioRecorderDelegate {
     }
 }
 
+//extension used for organization
 extension RecorderManager {
     func saveToCoreData(fileName: String) {
         print("** Try saving to coreData")

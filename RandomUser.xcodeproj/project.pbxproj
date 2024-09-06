@@ -17,6 +17,7 @@
 		0F10FEF32C87D8F50099A232 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F10FEF22C87D8F50099A232 /* UserManager.swift */; };
 		0F10FEF52C87DA980099A232 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F10FEF42C87DA980099A232 /* UserData.swift */; };
 		0F10FEF72C87E9580099A232 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F10FEF62C87E9580099A232 /* UserModel.swift */; };
+		0F1BC5872C8BA9FE007E3D9E /* UIViewClickListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1BC5862C8BA9FE007E3D9E /* UIViewClickListener.swift */; };
 		0F786EC62C882D5700B0EB3D /* Page2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F786EC52C882D5700B0EB3D /* Page2ViewController.swift */; };
 		0F786EC82C882D7600B0EB3D /* Page3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F786EC72C882D7600B0EB3D /* Page3ViewController.swift */; };
 		0FFA5B242C892D62004FDC28 /* RecorderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFA5B232C892D62004FDC28 /* RecorderManager.swift */; };
@@ -37,6 +38,7 @@
 		0F10FEF42C87DA980099A232 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		0F10FEF62C87E9580099A232 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		0F1BC5052C8A6173007E3D9E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		0F1BC5862C8BA9FE007E3D9E /* UIViewClickListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewClickListener.swift; sourceTree = "<group>"; };
 		0F786EC52C882D5700B0EB3D /* Page2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page2ViewController.swift; sourceTree = "<group>"; };
 		0F786EC72C882D7600B0EB3D /* Page3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page3ViewController.swift; sourceTree = "<group>"; };
 		0FFA5B232C892D62004FDC28 /* RecorderManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecorderManager.swift; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 				0F10FEE92C87D7A20099A232 /* Info.plist */,
 				0FFA5B232C892D62004FDC28 /* RecorderManager.swift */,
 				0FFA5B252C892E4D004FDC28 /* PlaybackManager.swift */,
+				0F1BC5862C8BA9FE007E3D9E /* UIViewClickListener.swift */,
 			);
 			path = RandomUser;
 			sourceTree = "<group>";
@@ -197,6 +200,7 @@
 				0F10FED92C87D7A00099A232 /* AppDelegate.swift in Sources */,
 				0F10FEF52C87DA980099A232 /* UserData.swift in Sources */,
 				0F10FEF32C87D8F50099A232 /* UserManager.swift in Sources */,
+				0F1BC5872C8BA9FE007E3D9E /* UIViewClickListener.swift in Sources */,
 				0F10FEDB2C87D7A00099A232 /* SceneDelegate.swift in Sources */,
 				0F10FEE32C87D7A00099A232 /* RandomUser.xcdatamodeld in Sources */,
 			);

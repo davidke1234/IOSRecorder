@@ -70,6 +70,7 @@ struct UserData: Codable {
     let results: [Result]
 }
 
+//mark causes separation line to appear!
 // MARK: - Result
 struct Result: Codable {
     let gender: String
@@ -79,7 +80,6 @@ struct Result: Codable {
     let login: Login
     let dob, registered: Dob
     let phone, cell: String
-    //let id: ID
     let picture: Picture
 }
 
@@ -89,22 +89,10 @@ struct Dob: Codable {
     let age: Int?
 }
 
-// MARK: - ID
-//struct ID: Codable {
-//    let name: String
-//    let value: String
-//}
-
 // MARK: - Location
 struct Location: Codable {
     let street, city, state: String
-    //let postcode: Int?
 }
-
-// MARK: - Coordinates
-//struct Coordinates: Codable {
-//    let latitude, longitude: String
-//}
 
 // MARK: - Timezone
 struct Timezone: Codable {

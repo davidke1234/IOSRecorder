@@ -1,13 +1,11 @@
 //
-//  WeatherManager.swift
-//  Clima
-//
-//  Created by Dad on 8/24/24.
-//  Copyright © 2024 App Brewery. All rights reserved.
+//  UserManager.swift
+//  RandomUser
+//  Use to mangage User api data
+//  Created by David on 9/3/24.
 //
 
 import Foundation
-import CoreLocation
 
 //*** create the protocol
 protocol UserManagerDelegate {
@@ -18,6 +16,7 @@ protocol UserManagerDelegate {
 struct UserManager {
     let userURL = "https://randomuser.me/api/1.2/?results=1"
     
+//    A delegate in Swift is a design pattern that allows one class to delegate the execution of a specific task to an object within another class.  SET the delegate protocol to pass data to view controller
     var delegate: UserManagerDelegate?
     
     func fetchUser() {
@@ -32,22 +31,18 @@ struct UserManager {
             //2. create url session
             let session = URLSession(configuration: .default)
             
-            //3. give session a task
-            //completionHandler takes a function but no output (void)
-            //passing a call to method handle but not values.  The session will call completionHandler and fill the values
-            
+            //3. give session a task, using a closure
             let task = session.dataTask(with: url) { (data, response, error) in
                 if error != nil {
                     self.delegate?.didFailWithError(error: error!)
                     return  //exit out of func handle
                 }
                 
-                //no errors, use otional binding to check data.  Set the delegate
+                //no errors, use optional binding to check data.  Set the delegate
                 if let safeData = data {
                     if let user = self.parseJSON(safeData) {
                         // *** SET the delegate protocol to pass data to view controller
                         self.delegate?.didUpdateUser(self, user: user)
-                        
                     }
                 }
             }
@@ -73,6 +68,7 @@ struct UserManager {
             var dob = ""
             let dateString = decodedData.results[0].dob.date
             let dateFormater = DateFormatter()
+            //this date is zulu so use timezone UTC
             dateFormater.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
             dateFormater.timeZone = TimeZone(abbreviation: "UTC")
             

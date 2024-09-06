@@ -2,7 +2,7 @@
 //  UserModel.swift
 //  RandomUser
 //
-//  Created by Dad on 9/3/24.
+//  Created by David on 9/3/24.
 //
 
 import Foundation
