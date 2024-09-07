@@ -61,7 +61,7 @@ struct UserManager {
             let first = decodedData.results[0].name.first
             let last = decodedData.results[0].name.last
             let email = decodedData.results[0].email
-            let picture = decodedData.results[0].picture.medium
+            let picture = decodedData.results[0].picture.large
             let gender = decodedData.results[0].gender
             
             //Get DOB

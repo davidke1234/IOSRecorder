@@ -18,23 +18,35 @@ class Page2ViewController: UIViewController {
     @IBOutlet weak var txtDOB: UILabel!
     @IBOutlet weak var txtGender: UILabel!
     
-    @IBOutlet weak var RecordButton: UIButton!
+    @IBOutlet weak var BtnRecord: UIButton!
+    @IBAction func record(_ sender: UIButton) {
+        print("--ready to record...")
+    }
+    
     var pictureUrl = ""
     var gender = ""
     var firstName = ""
     var lastName = ""
     var DOB = ""
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    
+        //location where data is stored for this app
+        print("**** Data stored at: \(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))")
+        
+        setPicture(urlString: pictureUrl)
+        txtLastName.text = lastName
+        txtFirstName.text = firstName
+        txtDOB.text = DOB
+        txtGender.text = gender
+    }
 
-    @IBAction func PlaySounds(_ sender: UIButton) {
+    @IBAction func nextPage(_ sender: UIButton) {
         self.performSegue(withIdentifier: "goToPlayer", sender: self)
     }
-    
-    @IBAction func RecordAudio(_ sender: UIButton) {
-        print("--ready to record...")
-        recordAudio()
-    }
-    
-    @IBAction func StopRecording(_ sender: UIButton) {
+
+    @IBAction func stop(_ sender: UIButton) {
         print("--stop recording and write to db")
         stopRecording(fileName: "David1")
     }
@@ -45,21 +57,6 @@ class Page2ViewController: UIViewController {
         personView.layer.cornerRadius = width / 2
         personView.clipsToBounds = true
         loadImage(from: urlString)
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        
-        //locate where data is stored for this app
-        print("**** Data stored at: \(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))")
-        
-        setPicture(urlString: pictureUrl)
-        txtLastName.text = lastName
-        txtFirstName.text = firstName
-        txtDOB.text = DOB
-        txtGender.text = gender
-        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
