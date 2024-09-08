@@ -262,13 +262,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G8n-hi-Pmh">
-                                <rect key="frame" x="0.0" y="108" width="398" height="263"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Pgf-Yo-D3Y">
+                                <rect key="frame" x="0.0" y="103" width="430" height="795"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uMl-gh-rja">
-                                        <rect key="frame" x="22" y="148" width="358" height="109"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TD6-6g-QWe" userLabel="PersonView">
+                                        <rect key="frame" x="0.0" y="0.0" width="430" height="265"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U1I-mm-eZi" userLabel="Person">
+                                                <rect key="frame" x="155" y="0.0" width="120" height="120"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="U1I-mm-eZi" firstAttribute="centerX" secondItem="TD6-6g-QWe" secondAttribute="centerX" id="8AM-OJ-Trh"/>
+                                            <constraint firstItem="U1I-mm-eZi" firstAttribute="top" secondItem="TD6-6g-QWe" secondAttribute="top" constant="8" id="rdp-hb-ua3"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uMl-gh-rja" userLabel="UserInfoView">
+                                        <rect key="frame" x="0.0" y="265" width="430" height="265"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="User Info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EoJ-TB-GMz">
                                                 <rect key="frame" x="145" y="0.0" width="69" height="21"/>
@@ -336,32 +347,49 @@
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </view>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TD6-6g-QWe">
-                                        <rect key="frame" x="137" y="0.0" width="124" height="120"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G8n-hi-Pmh" userLabel="RecordingsView">
+                                        <rect key="frame" x="0.0" y="530" width="430" height="265"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U1I-mm-eZi">
-                                                <rect key="frame" x="2" y="10" width="120" height="120"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Snv-gb-jzr">
+                                                <rect key="frame" x="144.33333333333337" y="8" width="141.66666666666663" height="34.333333333333336"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Get Recordings"/>
+                                                <connections>
+                                                    <action selector="GetRecordings:" destination="7h6-e8-84s" eventType="touchUpInside" id="dqy-HO-hU1"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="Snv-gb-jzr" firstAttribute="centerX" secondItem="G8n-hi-Pmh" secondAttribute="centerX" id="Xo0-LF-z1z"/>
+                                            <constraint firstItem="Snv-gb-jzr" firstAttribute="top" secondItem="G8n-hi-Pmh" secondAttribute="top" constant="8" id="g3Q-3g-mIq"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Snv-gb-jzr">
-                                <rect key="frame" x="99" y="427" width="142" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Get Recordings"/>
-                                <connections>
-                                    <action selector="GetRecordings:" destination="7h6-e8-84s" eventType="touchUpInside" id="dqy-HO-hU1"/>
-                                </connections>
-                            </button>
+                                <constraints>
+                                    <constraint firstItem="uMl-gh-rja" firstAttribute="top" secondItem="TD6-6g-QWe" secondAttribute="bottom" id="6AM-AE-UbN"/>
+                                    <constraint firstAttribute="trailing" secondItem="G8n-hi-Pmh" secondAttribute="trailing" id="IYB-dC-lFv"/>
+                                    <constraint firstItem="G8n-hi-Pmh" firstAttribute="top" secondItem="uMl-gh-rja" secondAttribute="bottom" id="JO2-YN-7qB"/>
+                                    <constraint firstItem="G8n-hi-Pmh" firstAttribute="top" secondItem="uMl-gh-rja" secondAttribute="bottom" id="MNo-my-yso"/>
+                                    <constraint firstItem="uMl-gh-rja" firstAttribute="leading" secondItem="Pgf-Yo-D3Y" secondAttribute="leading" id="Tqm-0k-QIO"/>
+                                    <constraint firstAttribute="bottom" secondItem="G8n-hi-Pmh" secondAttribute="bottom" id="auQ-uv-wxU"/>
+                                    <constraint firstItem="G8n-hi-Pmh" firstAttribute="leading" secondItem="Pgf-Yo-D3Y" secondAttribute="leading" id="etz-GF-Kvm"/>
+                                    <constraint firstAttribute="trailing" secondItem="uMl-gh-rja" secondAttribute="trailing" id="gTS-xU-7wm"/>
+                                    <constraint firstItem="TD6-6g-QWe" firstAttribute="top" secondItem="Pgf-Yo-D3Y" secondAttribute="top" id="pqW-Vf-c76"/>
+                                    <constraint firstItem="TD6-6g-QWe" firstAttribute="leading" secondItem="Pgf-Yo-D3Y" secondAttribute="leading" id="sEI-Ax-Zl9"/>
+                                    <constraint firstAttribute="trailing" secondItem="TD6-6g-QWe" secondAttribute="trailing" id="sgS-zA-gRQ"/>
+                                    <constraint firstItem="uMl-gh-rja" firstAttribute="top" secondItem="TD6-6g-QWe" secondAttribute="bottom" id="tqA-Si-8vO"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="BgU-iZ-tox"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
+                        <constraints>
+                            <constraint firstItem="Pgf-Yo-D3Y" firstAttribute="leading" secondItem="BgU-iZ-tox" secondAttribute="leading" id="Bza-lG-Hy1"/>
+                            <constraint firstItem="Pgf-Yo-D3Y" firstAttribute="bottom" secondItem="BgU-iZ-tox" secondAttribute="bottom" id="Pds-Us-r5x"/>
+                            <constraint firstItem="BgU-iZ-tox" firstAttribute="trailing" secondItem="Pgf-Yo-D3Y" secondAttribute="trailing" id="nx2-5c-ysY"/>
+                            <constraint firstItem="Pgf-Yo-D3Y" firstAttribute="top" secondItem="BgU-iZ-tox" secondAttribute="top" id="xfR-Xb-HOE"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Ego-38-5x0"/>
                     <connections>
@@ -374,7 +402,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jca-dw-P2G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2701.5384615384614" y="-28.436018957345969"/>
+            <point key="canvasLocation" x="2701.3953488372094" y="-28.969957081545065"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Qfg-CY-rQ1">
