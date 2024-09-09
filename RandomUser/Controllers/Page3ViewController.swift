@@ -21,12 +21,18 @@ class Page3ViewController: UIViewController {
         getRecordings()
     }
     
-    @IBOutlet weak var personView: UIImageView!
     @IBOutlet weak var txtLastName: UILabel!
-    @IBOutlet weak var txtFirstName: UILabel!
+    @IBOutlet weak var personView: UIImageView!
     @IBOutlet weak var txtDOB: UILabel!
+    @IBOutlet weak var txtFirstName: UILabel!
     @IBOutlet weak var txtGender: UILabel!
     
+    //    @IBOutlet weak var txtLastName: UILabel!
+//    @IBOutlet weak var txtFirstName: UILabel!
+//    @IBOutlet weak var txtDOB: UILabel!
+//    @IBOutlet weak var txtGender: UILabel!
+    
+
     fileprivate func getRecordings() {
         print("Get recordings")
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
