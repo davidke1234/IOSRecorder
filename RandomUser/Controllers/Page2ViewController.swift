@@ -48,7 +48,12 @@ class Page2ViewController: UIViewController {
 
     @IBAction func stop(_ sender: UIButton) {
         print("--stop recording and write to db")
-        stopRecording(fileName: "David1")
+        
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy/MM/dd HH:mm:ss"
+        let date = formatter.string(from: Date())
+        let fileName = date
+        stopRecording(fileName: fileName)
     }
     
     fileprivate func setPicture(urlString: String) {

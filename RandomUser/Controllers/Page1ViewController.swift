@@ -14,17 +14,14 @@ class Page1ViewController: UIViewController {
     @IBOutlet weak var Email: UILabel!
     @IBOutlet weak var Name: UILabel!
     @IBOutlet weak var DOB: UILabel!
-    
     @IBOutlet weak var InfoView: UIView!
-    
-    
+
     var userManager = UserManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         InfoView.backgroundColor = UIColor.white
         view.setOnClickListener {
-            print("view clicked")
             self.performSegue(withIdentifier: "goToRecorder", sender: self)
         }
 
@@ -51,12 +48,6 @@ extension Page1ViewController: UserManagerDelegate {
     func didUpdateUser(_ userManager: UserManager, user: UserModel) {
         //use dispatch to only update when data is ready.
         DispatchQueue.main.async {
-            print(user.first)
-            print(user.last)
-            print("email: \(user.email)")
-            print("picture: \(user.picture)")
-            print("DOB: \(user.DOB)")
-            
             self.Email.text = user.email
             let fullName = "\(user.first) \(user.last)"
             self.Name.text = fullName

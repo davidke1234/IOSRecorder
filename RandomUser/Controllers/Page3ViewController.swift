@@ -59,6 +59,7 @@ class Page3ViewController: UIViewController {
         
         tableView.dataSource = self
         tableView.delegate=self
+        tableView.isScrollEnabled=true;
         
         getRecordings()
     }

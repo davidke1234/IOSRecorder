@@ -7,12 +7,10 @@
 
 import UIKit
 
-// MARK: ClickListener
 class ClickListener: UITapGestureRecognizer {
     var onClick : (() -> Void)? = nil
 }
 
-// MARK: UIView Extension
 extension UIView {
     
     func setOnClickListener(action :@escaping () -> Void){
