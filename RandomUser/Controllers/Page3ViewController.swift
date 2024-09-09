@@ -9,7 +9,7 @@ import UIKit
 import CoreData
 
 class Page3ViewController: UIViewController {
-    
+
     var pictureUrl = ""
     var gender = ""
     var firstName = ""
@@ -20,11 +20,14 @@ class Page3ViewController: UIViewController {
         getRecordings()
     }
     
+    @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var txtLastName: UILabel!
     @IBOutlet weak var personView: UIImageView!
     @IBOutlet weak var txtDOB: UILabel!
     @IBOutlet weak var txtFirstName: UILabel!
     @IBOutlet weak var txtGender: UILabel!
+    
+    var audioFilesArray: [String] = []
     
     fileprivate func getRecordings() {
         print("Get recordings")
@@ -35,13 +38,11 @@ class Page3ViewController: UIViewController {
         do {
             print("In do..")
             let audioFiles = try context.fetch(fetchRequest)
-            let playbackManager = PlaybackManager()
             for audioFile in audioFiles {
                 let fileName = audioFile.fileName!
-                    
-                print("FileName: \(String(describing: audioFile.fileName))")
-                playbackManager.playAudio(fileName: fileName)
+                audioFilesArray.append(fileName)
             }
+            
         } catch {
             print("Could not fetch audio files: \(error)")
         }
@@ -55,6 +56,11 @@ class Page3ViewController: UIViewController {
         txtFirstName.text = firstName
         txtDOB.text = DOB
         txtGender.text = gender
+        
+        tableView.dataSource = self
+        tableView.delegate=self
+        
+        getRecordings()
     }
     
     fileprivate func setPicture(urlString: String) {
@@ -91,6 +97,30 @@ class Page3ViewController: UIViewController {
             }
         }
     }
+}
+
+extension Page3ViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        audioFilesArray.count
+    }
     
-    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ReusableCell", for: indexPath)
+        cell.textLabel?.text = audioFilesArray[indexPath.row]
+        return cell
+    }
+}
+
+extension Page3ViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(indexPath.row)
+      
+        let selectedCell = tableView.cellForRow(at: indexPath)
+        let fileName = selectedCell?.textLabel?.text
+        if let fileName = fileName {
+            print("Playing \(fileName)")
+            let playbackManager = PlaybackManager()
+            playbackManager.playAudio(fileName: fileName)
+        }
+    }
 }

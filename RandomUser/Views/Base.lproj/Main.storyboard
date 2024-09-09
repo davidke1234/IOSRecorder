@@ -464,19 +464,31 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G8n-hi-Pmh" userLabel="RecordingsView">
                                         <rect key="frame" x="0.0" y="530" width="430" height="265"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Snv-gb-jzr">
-                                                <rect key="frame" x="144.33333333333337" y="8" width="141.66666666666663" height="34.333333333333336"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Get Recordings"/>
-                                                <connections>
-                                                    <action selector="GetRecordings:" destination="7h6-e8-84s" eventType="touchUpInside" id="dqy-HO-hU1"/>
-                                                </connections>
-                                            </button>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="K2N-t2-HpQ">
+                                                <rect key="frame" x="30" y="42" width="367" height="198"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <prototypes>
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReusableCell" rowHeight="48" id="LbZ-U9-eOB">
+                                                        <rect key="frame" x="0.0" y="50" width="367" height="48"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LbZ-U9-eOB" id="nhp-5M-Gg4">
+                                                            <rect key="frame" x="0.0" y="0.0" width="367" height="48"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                        </tableViewCellContentView>
+                                                    </tableViewCell>
+                                                </prototypes>
+                                            </tableView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Click on file to play" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kOm-qc-JPB">
+                                                <rect key="frame" x="143.66666666666666" y="1" width="142.99999999999997" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstItem="Snv-gb-jzr" firstAttribute="centerX" secondItem="G8n-hi-Pmh" secondAttribute="centerX" id="Xo0-LF-z1z"/>
-                                            <constraint firstItem="Snv-gb-jzr" firstAttribute="top" secondItem="G8n-hi-Pmh" secondAttribute="top" constant="8" id="g3Q-3g-mIq"/>
+                                            <constraint firstItem="kOm-qc-JPB" firstAttribute="centerX" secondItem="G8n-hi-Pmh" secondAttribute="centerX" id="6dH-LP-t5h"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -508,6 +520,7 @@
                     <navigationItem key="navigationItem" id="Ego-38-5x0"/>
                     <connections>
                         <outlet property="personView" destination="U1I-mm-eZi" id="CcF-Hq-4oj"/>
+                        <outlet property="tableView" destination="K2N-t2-HpQ" id="wYw-OW-sBF"/>
                         <outlet property="txtDOB" destination="6K4-gF-mq3" id="CVZ-vv-FZr"/>
                         <outlet property="txtFirstName" destination="jlU-WH-pTX" id="qgm-pj-k8v"/>
                         <outlet property="txtGender" destination="6r8-Dk-MCr" id="Dxh-WC-DGM"/>
