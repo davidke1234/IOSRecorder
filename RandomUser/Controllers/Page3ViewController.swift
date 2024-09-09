@@ -15,7 +15,6 @@ class Page3ViewController: UIViewController {
     var firstName = ""
     var lastName = ""
     var DOB = ""
-    
 
     @IBAction func GetRecordings(_ sender: UIButton) {
         getRecordings()
@@ -27,12 +26,6 @@ class Page3ViewController: UIViewController {
     @IBOutlet weak var txtFirstName: UILabel!
     @IBOutlet weak var txtGender: UILabel!
     
-    //    @IBOutlet weak var txtLastName: UILabel!
-//    @IBOutlet weak var txtFirstName: UILabel!
-//    @IBOutlet weak var txtDOB: UILabel!
-//    @IBOutlet weak var txtGender: UILabel!
-    
-
     fileprivate func getRecordings() {
         print("Get recordings")
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -62,8 +55,6 @@ class Page3ViewController: UIViewController {
         txtFirstName.text = firstName
         txtDOB.text = DOB
         txtGender.text = gender
-        
-
     }
     
     fileprivate func setPicture(urlString: String) {
