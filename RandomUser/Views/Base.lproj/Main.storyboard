@@ -391,7 +391,7 @@
                                                 <rect key="frame" x="250" y="53" width="52" height="15"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="15" id="2kh-LI-1Vh"/>
-                                                    <constraint firstAttribute="width" constant="52" id="5I6-ZH-rSx"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="52" id="5I6-ZH-rSx"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <nil key="textColor"/>
@@ -401,8 +401,7 @@
                                                 <rect key="frame" x="50" y="35" width="67" height="15"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="15" id="0Ur-9A-NA8"/>
-                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="AND-X6-m5L"/>
-                                                    <constraint firstAttribute="width" constant="67" id="iFS-od-tMO"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="67" id="iFS-od-tMO"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <nil key="textColor"/>
@@ -452,8 +451,8 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="txtGender" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6r8-Dk-MCr">
-                                                <rect key="frame" x="310" y="58" width="56.666666666666686" height="15"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="txtGender" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6r8-Dk-MCr">
+                                                <rect key="frame" x="304" y="53" width="56.666666666666686" height="15"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="15" id="Mrm-0f-Fd5"/>
                                                 </constraints>
@@ -522,17 +521,12 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="G8n-hi-Pmh" secondAttribute="bottom" id="0w2-0h-zU2"/>
-                                    <constraint firstItem="uMl-gh-rja" firstAttribute="top" secondItem="TD6-6g-QWe" secondAttribute="bottom" id="6AM-AE-UbN"/>
-                                    <constraint firstItem="uMl-gh-rja" firstAttribute="top" secondItem="TD6-6g-QWe" secondAttribute="bottom" id="Gvk-Qg-SWZ"/>
                                     <constraint firstItem="TD6-6g-QWe" firstAttribute="leading" secondItem="Pgf-Yo-D3Y" secondAttribute="leading" id="GxD-RM-cCl"/>
                                     <constraint firstAttribute="trailing" secondItem="G8n-hi-Pmh" secondAttribute="trailing" id="IYB-dC-lFv"/>
-                                    <constraint firstItem="G8n-hi-Pmh" firstAttribute="top" secondItem="uMl-gh-rja" secondAttribute="bottom" id="JO2-YN-7qB"/>
-                                    <constraint firstItem="G8n-hi-Pmh" firstAttribute="top" secondItem="uMl-gh-rja" secondAttribute="bottom" id="MNo-my-yso"/>
                                     <constraint firstItem="G8n-hi-Pmh" firstAttribute="leading" secondItem="Pgf-Yo-D3Y" secondAttribute="leading" id="S7N-FP-Ksb"/>
                                     <constraint firstAttribute="trailing" secondItem="G8n-hi-Pmh" secondAttribute="trailing" id="TNm-u3-S1L"/>
                                     <constraint firstItem="uMl-gh-rja" firstAttribute="leading" secondItem="Pgf-Yo-D3Y" secondAttribute="leading" id="Tqm-0k-QIO"/>
                                     <constraint firstAttribute="bottom" secondItem="G8n-hi-Pmh" secondAttribute="bottom" id="auQ-uv-wxU"/>
-                                    <constraint firstItem="G8n-hi-Pmh" firstAttribute="top" secondItem="uMl-gh-rja" secondAttribute="bottom" id="bVf-yR-3Od"/>
                                     <constraint firstItem="TD6-6g-QWe" firstAttribute="top" secondItem="Pgf-Yo-D3Y" secondAttribute="top" id="d9m-i0-fgq"/>
                                     <constraint firstItem="G8n-hi-Pmh" firstAttribute="leading" secondItem="Pgf-Yo-D3Y" secondAttribute="leading" id="etz-GF-Kvm"/>
                                     <constraint firstAttribute="trailing" secondItem="uMl-gh-rja" secondAttribute="trailing" id="gTS-xU-7wm"/>
@@ -541,9 +535,7 @@
                                     <constraint firstItem="TD6-6g-QWe" firstAttribute="leading" secondItem="Pgf-Yo-D3Y" secondAttribute="leading" id="sEI-Ax-Zl9"/>
                                     <constraint firstAttribute="trailing" secondItem="TD6-6g-QWe" secondAttribute="trailing" id="sgS-zA-gRQ"/>
                                     <constraint firstItem="uMl-gh-rja" firstAttribute="leading" secondItem="Pgf-Yo-D3Y" secondAttribute="leading" id="tCS-Ab-7or"/>
-                                    <constraint firstItem="uMl-gh-rja" firstAttribute="top" secondItem="TD6-6g-QWe" secondAttribute="bottom" id="tqA-Si-8vO"/>
                                     <constraint firstAttribute="trailing" secondItem="uMl-gh-rja" secondAttribute="trailing" id="tsx-8T-DWA"/>
-                                    <constraint firstItem="uMl-gh-rja" firstAttribute="top" secondItem="TD6-6g-QWe" secondAttribute="bottom" id="xQt-HG-veO"/>
                                 </constraints>
                             </stackView>
                         </subviews>
