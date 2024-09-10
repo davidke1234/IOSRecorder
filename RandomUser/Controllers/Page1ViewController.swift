@@ -11,6 +11,9 @@ class Page1ViewController: UIViewController {
     
     var nextUser = UserModel(first: "",last: "",DOB: "",email: "",picture: "",gender: "")
    
+    @IBAction func refreshData(_ sender: UIButton) {
+        userManager.fetchUser()
+    }
     @IBOutlet weak var Email: UILabel!
     @IBOutlet weak var Name: UILabel!
     @IBOutlet weak var DOB: UILabel!
